@@ -1,0 +1,11 @@
+student_id,name,email,teacher_email,course_id,gender,age_band,region,highest_education,imd_band,disability,num_of_prev_attempts,studied_credits,weighted_avg_score,sum_clicks,avg_clicks_per_day,days_active,last_active_day,click_trend
+STU001,Alice Johnson,alice@university.edu,prof.smith@university.edu,AAA_2024J,1,0,3,2,5,0,0,120,78.5,2450,12.5,196,245,1.2
+STU002,Bob Williams,bob@university.edu,prof.smith@university.edu,AAA_2024J,0,0,5,3,7,0,0,60,85.2,3100,15.8,196,250,2.1
+STU003,Charlie Brown,charlie@university.edu,prof.smith@university.edu,BBB_2024J,0,1,1,1,3,0,2,120,42.1,450,3.2,140,180,-1.8
+STU004,Diana Prince,diana@university.edu,prof.smith@university.edu,AAA_2024J,1,0,8,2,4,0,0,90,71.0,1800,9.5,189,240,0.5
+STU005,Evan Davis,evan@university.edu,prof.jones@university.edu,BBB_2024J,0,0,2,1,2,1,1,150,35.8,280,2.1,133,160,-2.5
+STU006,Fiona Garcia,fiona@university.edu,prof.jones@university.edu,CCC_2024J,1,0,6,3,8,0,0,60,91.3,4200,20.0,210,255,3.0
+STU007,George Miller,george@university.edu,prof.jones@university.edu,AAA_2024J,0,2,4,0,1,0,3,120,28.4,150,1.5,100,120,-3.1
+STU008,Hannah Lee,hannah@university.edu,prof.smith@university.edu,BBB_2024J,1,0,7,2,6,0,0,90,65.0,1500,8.3,180,220,0.2
+STU009,Ian Wilson,ian@university.edu,prof.jones@university.edu,CCC_2024J,0,1,0,2,5,1,0,120,55.0,900,5.0,180,200,-0.8
+STU010,Julia Martinez,julia@university.edu,prof.smith@university.edu,AAA_2024J,1,0,9,4,9,0,0,60,95.0,5000,23.8,210,258,4.2
