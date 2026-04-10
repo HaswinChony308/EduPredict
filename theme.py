@@ -145,25 +145,46 @@ def inject_css():
     /* ── Sidebar ─────────────────────────────────────────── */
     [data-testid="stSidebar"] {{
         background-color: {c['sidebar_bg']} !important;
-        border-right: 1px solid {c['sidebar_border']} !important;
+        border-right: 2px solid {c['sidebar_border']} !important;
+        box-shadow: 4px 0 16px rgba(0,0,0,{'0.4' if is_dark else '0.08'}) !important;
+        min-height: 100vh !important;
+    }}
+    [data-testid="stSidebar"] > div:first-child {{
+        background-color: {c['sidebar_bg']} !important;
     }}
     [data-testid="stSidebar"] h1, 
     [data-testid="stSidebar"] h2, 
-    [data-testid="stSidebar"] h3,
-    [data-testid="stSidebar"] p, 
-    [data-testid="stSidebar"] span, 
-    [data-testid="stSidebar"] label, 
-    [data-testid="stSidebar"] div {{
-        color: {c['text']};
+    [data-testid="stSidebar"] h3 {{
+        color: {c['text']} !important;
+    }}
+    [data-testid="stSidebar"] p,
+    [data-testid="stSidebar"] span,
+    [data-testid="stSidebar"] label {{
+        color: {c['text']} !important;
     }}
     [data-testid="stSidebar"] .stMarkdown p {{
         color: {c['text_secondary']} !important;
+    }}
+    [data-testid="stSidebar"] button {{
+        color: {c['text']} !important;
+        background-color: {c['btn_secondary_bg']} !important;
+    }}
+    /* Sidebar nav links */
+    [data-testid="stSidebar"] a {{
+        color: {c['primary']} !important;
+    }}
+    /* Sidebar toggle button (chevron) — always visible */
+    [data-testid="collapsedControl"] {{
+        background-color: {c['sidebar_bg']} !important;
+        border: 1px solid {c['border']} !important;
+        color: {c['text']} !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }}
 
     /* ── Hide default Streamlit chrome ────────────────────── */
     #MainMenu {{visibility: hidden;}}
     footer {{visibility: hidden;}}
-    header {{visibility: hidden;}}
 
     /* ── Typography ───────────────────────────────────────── */
     h1, h2, h3 {{
@@ -176,7 +197,7 @@ def inject_css():
     h2 {{ font-size: 1.6rem !important; }}
     h3 {{ font-size: 1.2rem !important; }}
 
-    p, li, span, label, div {{
+    p, li, label {{
         color: {c['text']};
     }}
     strong {{ font-weight: 700; }}

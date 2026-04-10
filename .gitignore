@@ -13,13 +13,14 @@ venv.bak/
 # Database
 db/*.db
 
-# Models
-models/*.pkl
-models/*.json
+# Models (excluding backups, allowing active models for deployment)
+models/*_backup.pkl
+models/*_previous.pkl
 
 # Data
 data/*.csv
 !data/sample_students.csv
+!data/test_dataset_*.csv
 
 # IDE
 .vscode/

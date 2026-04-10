@@ -478,40 +478,55 @@ def preprocess_full_pipeline():
 def preprocess_batch(df):
     """
     Preprocess a batch upload CSV for prediction.
-    
-    This function is called from the Batch Upload page (page 3).
-    It applies the same transformations as the training pipeline
-    but uses the SAVED scaler (not fitting a new one).
-    
+
+    Fully robust — handles string categoricals, NaNs, wrong dtypes,
+    and completely unknown values without crashing.
+
     Parameters:
       df: DataFrame with columns matching EXPECTED_FEATURES
-    
+
     Returns:
       X_scaled: numpy array ready for model.predict()
     """
     df = df.copy()
-    
-    # Load the saved scaler
-    if not os.path.exists(SCALER_PATH):
-        print("⚠️ Scaler not found. Using raw features (model may perform poorly).")
-        return df[EXPECTED_FEATURES].values
-    
-    scaler = joblib.load(SCALER_PATH)
-    encoders = joblib.load(ENCODERS_PATH)
-    numerical_cols = encoders["numerical_cols"]
-    
-    # Ensure all expected features exist
+
+    # ── Step 1: Ensure all expected feature columns exist ──────
     for col in EXPECTED_FEATURES:
         if col not in df.columns:
             df[col] = 0
-    
-    # Apply scaling to numerical columns only
+
+    # ── Step 2: Apply categorical → integer encoding ───────────
+    # Handles "M"/"F", "Y"/"N", age-band strings, education strings, etc.
+    try:
+        df = encode_demographics(df)
+    except Exception as e:
+        print(f"⚠️  encode_demographics warning (continuing): {e}")
+
+    # ── Step 3: Force every feature column to numeric ──────────
+    # Catches anything encode_demographics missed (e.g. custom string values)
+    for col in EXPECTED_FEATURES:
+        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
+
+    # ── Step 4: Build the feature matrix ──────────────────────
     X = df[EXPECTED_FEATURES].copy()
-    for col in numerical_cols:
-        X[col] = pd.to_numeric(X[col], errors="coerce").fillna(0)
-    
-    X[numerical_cols] = scaler.transform(X[numerical_cols])
-    
+
+    # ── Step 5: Load scaler & scale numerical columns ──────────
+    if not os.path.exists(SCALER_PATH):
+        print("⚠️  Scaler not found — returning un-scaled features.")
+        return X.values
+
+    try:
+        scaler = joblib.load(SCALER_PATH)
+        encoders = joblib.load(ENCODERS_PATH)
+        numerical_cols = encoders.get("numerical_cols", [])
+
+        # Only scale columns that actually exist in X
+        cols_to_scale = [c for c in numerical_cols if c in X.columns]
+        if cols_to_scale:
+            X[cols_to_scale] = scaler.transform(X[cols_to_scale])
+    except Exception as e:
+        print(f"⚠️  Scaling warning (continuing with raw features): {e}")
+
     return X.values
 
 

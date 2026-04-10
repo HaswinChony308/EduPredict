@@ -1,0 +1,57 @@
+{
+  "training_date": "2026-04-10T15:39:19.426048",
+  "accuracy": 0.99,
+  "f1_score": 0.9899,
+  "num_samples": 2000,
+  "num_features": 14,
+  "feature_names": [
+    "gender",
+    "age_band",
+    "region",
+    "highest_education",
+    "imd_band",
+    "disability",
+    "num_of_prev_attempts",
+    "studied_credits",
+    "weighted_avg_score",
+    "sum_clicks",
+    "avg_clicks_per_day",
+    "days_active",
+    "last_active_day",
+    "click_trend"
+  ],
+  "class_names": [
+    "Excelling",
+    "High Risk",
+    "Moderate Risk",
+    "On Track"
+  ],
+  "classification_report": "               precision    recall  f1-score   support\n\n    Excelling       1.00      0.98      0.99        60\n    High Risk       0.99      0.99      0.99       100\nModerate Risk       0.98      0.99      0.99       100\n     On Track       0.99      0.99      0.99       140\n\n     accuracy                           0.99       400\n    macro avg       0.99      0.99      0.99       400\n weighted avg       0.99      0.99      0.99       400\n",
+  "confusion_matrix": [
+    [
+      59,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      99,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      99,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      139
+    ]
+  ],
+  "data_source": "synthetic_sample"
+}

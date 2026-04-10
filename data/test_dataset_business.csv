@@ -1,0 +1,11 @@
+student_id,name,email,teacher_email,course_id,gender,age_band,region,highest_education,imd_band,disability,num_of_prev_attempts,studied_credits,weighted_avg_score,sum_clicks,avg_clicks_per_day,days_active,last_active_day,click_trend
+BUS001,John Smith,john.smith@bus.edu,prof.adams@bus.edu,BUS500,M,35-55,2,HE Qualification,80-90%,N,0,60,82.0,1500,10.0,150,180,0.5
+BUS002,Jane Doe,jane.doe@bus.edu,prof.adams@bus.edu,BUS500,F,0-35,1,Post Graduate Qualification,90-100%,N,0,30,95.5,2100,15.5,135,175,1.2
+BUS003,Mike Jones,mike.jones@bus.edu,prof.clark@bus.edu,BUS600,M,55<=,4,A Level or Equivalent,40-50%,Y,1,120,45.0,800,5.0,160,200,-1.5
+BUS004,Sarah Connor,sarah.connor@bus.edu,prof.adams@bus.edu,BUS500,F,35-55,3,Lower Than A Level,20-30%,N,2,90,55.5,1200,8.0,150,195,-0.2
+BUS005,Tom Wilson,tom.wilson@bus.edu,prof.clark@bus.edu,BUS600,M,0-35,5,HE Qualification,70-80%,N,0,60,88.0,1800,12.5,144,185,2.0
+BUS006,Emily Brown,emily.brown@bus.edu,prof.adams@bus.edu,BUS500,F,55<=,6,No Formal quals,10-20,Y,3,120,32.0,400,2.5,160,210,-2.5
+BUS007,David Miller,david.miller@bus.edu,prof.clark@bus.edu,BUS600,M,35-55,7,HE Qualification,60-70%,N,0,60,78.5,1650,11.0,150,190,0.8
+BUS008,Lisa Taylor,lisa.taylor@bus.edu,prof.adams@bus.edu,BUS500,F,0-35,8,A Level or Equivalent,50-60%,N,1,90,65.0,1350,9.0,150,200,0.1
+BUS009,Chris Evans,chris.evans@bus.edu,prof.clark@bus.edu,BUS600,M,55<=,9,Lower Than A Level,30-40%,Y,0,120,50.5,950,6.5,146,188,-1.2
+BUS010,Anna White,anna.white@bus.edu,prof.adams@bus.edu,BUS500,F,35-55,0,HE Qualification,80-90%,N,0,60,85.5,1700,11.5,147,185,1.5

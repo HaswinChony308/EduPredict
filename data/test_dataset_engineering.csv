@@ -1,0 +1,16 @@
+student_id,name,email,teacher_email,course_id,gender,age_band,region,highest_education,imd_band,disability,num_of_prev_attempts,studied_credits,weighted_avg_score,sum_clicks,avg_clicks_per_day,days_active,last_active_day,click_trend
+ENG001,Aarav Sharma,aarav.sharma@eng.edu,prof.kumar@eng.edu,ENG2024A,M,0-35,3,A Level or Equivalent,50-60%,N,0,120,88.5,4200,18.2,231,260,2.8
+ENG002,Priya Patel,priya.patel@eng.edu,prof.kumar@eng.edu,ENG2024A,F,0-35,5,HE Qualification,70-80%,N,0,60,92.1,5100,22.0,232,265,3.5
+ENG003,Ravi Mehta,ravi.mehta@eng.edu,prof.nair@eng.edu,ENG2024B,M,0-35,1,Lower Than A Level,20-30%,N,2,120,31.4,220,2.0,110,145,-4.1
+ENG004,Sneha Iyer,sneha.iyer@eng.edu,prof.kumar@eng.edu,ENG2024A,F,0-35,8,A Level or Equivalent,40-50%,N,0,90,74.0,1950,9.8,199,242,0.6
+ENG005,Kiran Reddy,kiran.reddy@eng.edu,prof.nair@eng.edu,ENG2024B,M,0-35,2,Lower Than A Level,10-20,Y,1,150,29.7,180,1.6,112,140,-3.8
+ENG006,Divya Nair,divya.nair@eng.edu,prof.nair@eng.edu,ENG2024C,F,0-35,6,HE Qualification,80-90%,N,0,60,95.0,6200,26.5,234,268,4.7
+ENG007,Arjun Singh,arjun.singh@eng.edu,prof.nair@eng.edu,ENG2024A,M,35-55,4,No Formal quals,10-20,N,3,120,22.1,95,1.1,86,110,-5.2
+ENG008,Meera Krishnan,meera.k@eng.edu,prof.kumar@eng.edu,ENG2024B,F,0-35,7,A Level or Equivalent,60-70%,N,0,90,68.0,1600,8.5,188,225,0.3
+ENG009,Vijay Bose,vijay.bose@eng.edu,prof.nair@eng.edu,ENG2024C,M,35-55,0,A Level or Equivalent,50-60%,Y,0,120,58.5,1100,5.8,190,210,-0.5
+ENG010,Ananya Das,ananya.das@eng.edu,prof.kumar@eng.edu,ENG2024A,F,0-35,9,Post Graduate Qualification,90-100%,N,0,60,97.0,7000,30.0,233,270,5.1
+ENG011,Rahul Gupta,rahul.gupta@eng.edu,prof.kumar@eng.edu,ENG2024B,M,0-35,3,Lower Than A Level,30-40%,N,1,120,45.2,520,3.8,137,170,-1.5
+ENG012,Lakshmi Pillai,lakshmi.p@eng.edu,prof.nair@eng.edu,ENG2024C,F,0-35,2,HE Qualification,70-80%,N,0,60,83.0,3500,16.0,219,255,2.2
+ENG013,Sanjay Verma,sanjay.v@eng.edu,prof.kumar@eng.edu,ENG2024A,M,35-55,5,Lower Than A Level,0-10%,Y,2,150,26.0,140,1.3,108,130,-4.5
+ENG014,Pooja Agarwal,pooja.a@eng.edu,prof.nair@eng.edu,ENG2024B,F,0-35,6,A Level or Equivalent,60-70%,N,0,90,72.5,1750,9.1,193,238,0.8
+ENG015,Nikhil Menon,nikhil.m@eng.edu,prof.kumar@eng.edu,ENG2024C,M,0-35,4,HE Qualification,80-90%,N,0,60,90.5,4800,21.0,229,262,3.2
