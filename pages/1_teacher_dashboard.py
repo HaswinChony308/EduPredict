@@ -77,8 +77,8 @@ else:
     total = len(sdf)
     hr = len(sdf[sdf["risk_level"] == "High Risk"])
     mr = len(sdf[sdf["risk_level"] == "Moderate Risk"])
-    ot = len(sdf[sdf["risk_level"] == "On Track"])
-    ex = len(sdf[sdf["risk_level"] == "Excelling"])
+    ot = len(sdf[sdf["risk_level"] == "On the Track"])
+    ex = len(sdf[sdf["risk_level"] == "Excelling! GREAT JOB"])
 
     cols = st.columns(5)
     for col, (label, val, clr) in zip(cols, [("Total", total, c["text"]), ("High Risk", hr, c["high_risk"]),
